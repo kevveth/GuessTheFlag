@@ -47,6 +47,7 @@ struct ContentView: View {
                             FlagImage(country: countries[number])
                                 .rotation3DEffect(.degrees(selectedFlag == number ? 360 : 0), axis: (x: 0, y: 1, z: 0))
                                 .opacity(showingScore && number != selectedFlag ? 0.25 : 1.0)
+                                .blur(radius: showingScore && number != selectedFlag ? 4 : 1)
                         }
                     }
                 }
